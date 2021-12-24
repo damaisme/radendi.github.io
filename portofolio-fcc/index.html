@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damasukma Trihanandi</title>
+  <link rel="stylesheet" href="style.css" title="" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<main>
+  <nav id="navbar">
+    <p class="nav-title">DT</p>
+    <a onclick="navToggle()"><i class="fa fa-bars"></i></a>
+    <ul class="nav-menu">
+      <li><a onclick="navToggle()" href="#welcome-section">Home</a></li>
+      <li><a onclick="navToggle()" href="#projects">Projects</a></li>
+      <li><a onclick="navToggle()" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <section id="welcome-section">
+    <p class="welcome-quote" data-aos="fade-right">WE CAN CHANGE<BR>THE FUTURE</p>
+    <h1 class="welcome-title" data-aos="fade-left">HI I'm Damasukma<br>Trihanandi</h1>
+    <p class="welcome-desc" data-aos="fade-right">I am web developer, I've been learning and exprerinced the web development for two years.</p>
+    <button class="welcome-btn" type="button" data-aos="zoom-in">Download CV</button>
+    <div class=""></div>
+  </section>
+  
+  <section id="projects">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <header>
+      <h1>My Project</h1>
+    </header>
+    <div class="projects-grid">
+      <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+        <div class="card-header">
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="oi">
+          <a class="project-github" href="https://github.com/radendi"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Javascript Calculator</h3>
+          <p>Project ini menggunakan javascript untuk membuat calculator</p>
+          <label>Javascript</label>
+          <label>HTML</label>
+        </div>
+      </div>
+      
+      <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+        <div class="card-header">
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="oi">
+          <a class="project-github" href="https://github.com/radendi"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Tribun Page</h3>
+          <p>Project ini termasuk dalam course freecodecamp.</p>
+          <label>HTML5</label>
+          <label>CSS3</label>
+        </div>
+      </div>
+      
+      <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+        <div class="card-header">
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="oi">
+          <a class="project-github" href="https://github.com/radendi"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Random Quote API</h3>
+          <p>Menyediakan quote random, dibuat dengan express.js dan module tambahan lainya.</p>
+          <label>Express JS</label>
+          <label>javascript</label>
+        </div>
+      </div>
+      
+      <button class="projects-btn" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="1000">Show All</button>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <h1 data-aos="fade-left" data-aos-duration="1000">Contact Information</h1>
+    <p data-aos="fade-right" data-aos-duration="1000">get some coffe and lets work together</p>
+    <a data-aos="fade-left" data-aos-duration="1000" href="https://github.com/radendi" id="profile-link" target="_blank"><i class="fa fa-phone"></i>0858-0058-9558</a>
+    <a data-aos="fade-right" data-aos-duration="1000" href="https://github.com/radendi" id="profile-link" target="_blank"><i class="fa fa-envelope"></i>mail.radendi.me</a>
+    <a data-aos="fade-left" data-aos-duration="1000" href="https://github.com/radendi" id="profile-link" target="_blank"><i class="fa fa-map"></i>Kabupaten Tegal</a>
+    
+    <div data-aos="zoom-in" data-aos-duration="1000" id="other-contact">
+      <a href=""><i class="fa fa-github"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-instagram"></i></a>
+    </div>
+  </section>
+  <footer>
+    <p>**This is just a fake portfolio. All the projects and contact details given are not real.
+    <br>© Created for freeCodeCamp </p>
+  </footer>
+</main>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  let navmenu = document.querySelector('#navbar .nav-menu')
+  
+  
+  function navToggle(){
+    navmenu.classList.toggle('open')
+  }
+</script>
+</body>
+</html>
