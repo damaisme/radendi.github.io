@@ -7,10 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="humberger.css"
+	<link rel="stylesheet" type="text/css" href="humberger.css">
 </head>
 <body class="bg">
-  
 	<!-- navbar -->
 	<nav id="navbar" class="fixed w-full top-1 left-0 z-20 ">
 		<div id="navheader" class="flex justify-between items-center px-5 py-3 text-white">
@@ -76,6 +75,28 @@
 		</div>
 	</div>
 
+	<!-- popup edit -->
+	<div id="edit" class="hidden z-20 top-0 left-0 h-screen w-screen bg-popup flex justify-center items-center">
+		<div class="rounded-lg bg-purple-700 w-10/12 flex justify-center mb-20">
+			<!-- create from -->
+			<div class="w-full p-4">
+				<form action="edit">
+				<div class="flex justify-between items-center">
+					<h1 class="text-2xl font-bold text-white">Edit Postingan</h1>
+					<a onclick="toggle('edit','fixed','hidden')" class="text-xl text-red-500"><i class="fa fa-times"></i></a>
+				</div>
+				<div class="flex justify-between items-center mt-4">
+					<textarea class="w-full h-48 rounded-lg p-2" placeholder="">Ini adalah post mu yang lama.</textarea>
+				</div>
+				<div class="flex justify-center items-center mt-4">
+					<button type="submit" name="submit" class="bg-green-500 rounded py-2 px-4 text-white">Edit</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup delete -->
 	<div id="delete" class="hidden z-20 top-0 left-0 h-screen w-screen bg-popup flex justify-center items-center">
 		<div class="rounded-lg bg-purple-700 w-9/12 flex justify-center">
 			<div class="w-full p-4">
@@ -96,24 +117,24 @@
 
 		<div class="bg-purple-700 rounded-lg px-4 py-4 mt-3 text-white relative">
 			<a class="absolute right-4 top-0" onclick="actionToggle('post1')"><i class="fa fa-ellipsis-h"></i></a>
-			<a href="" class="hover:text-black block truncate text-clip w-5/6">Lorem ipsum dolor sit amet, consectetur.sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</a>
+			<a href="post.html" class="hover:text-black block truncate text-clip w-5/6">Lorem ipsum dolor sit amet, consectetur.sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</a>
 		</div>
 
 		<div id="post1" class="action-menu bg-yellow-200 px-4 py-2 flex justify-between w-full relative bottom-1.5">
-			<a href=""><i class="fa fa-pen mr-2"></i>Edit</a>
-			<a href=""><i class="fa fa-share mr-2"></i>Share</a>
+			<a onclick="toggle('edit','fixed','hidden')"><i class="fa fa-pen mr-2"></i>Edit</a>
+			<a onclick='shareIt("is title","is text","https://anonim.me/postt1")'><i class="fa fa-share mr-2"></i>Share</a>
 			<a onclick="toggle('delete','fixed','hidden')"><i class="fa fa-trash mr-2"></i>Delete</a>
 		</div>
 
 		<div class="bg-purple-700 rounded-lg px-4 py-4 mt-3 text-white relative">
 			<a class="absolute right-4 top-0" onclick="actionToggle('post2')"><i class="fa fa-ellipsis-h"></i></a>
-			<a href="" class="hover:text-black block truncate text-clip w-5/6">Lorem ipsum dolor sit amet, consectetur.sdsdfsfsfsfsf</a>
+			<a href="post.html" class="hover:text-black block truncate text-clip w-5/6">Lorem ipsum dolor sit amet, consectetur.sdsdfsfsfsfsf</a>
 		</div>
 
 		<div id="post2" class="action-menu bg-yellow-200 px-4 py-2 flex justify-between w-full relative bottom-1.5">
-			<a href=""><i class="fa fa-pen mr-2"></i>Edit</a>
-			<a href=""><i class="fa fa-share mr-2"></i>Share</a>
-			<a href=""><i class="fa fa-trash mr-2"></i>Delete</a>
+			<a onclick="toggle('edit','fixed','hidden')"><i class="fa fa-pen mr-2"></i>Edit</a>
+			<a onclick='shareIt("is title","is text","https://anonim.me/postt2")'><i class="fa fa-share mr-2"></i>Share</a>
+			<a onclick="toggle('delete','fixed','hidden')"><i class="fa fa-trash mr-2"></i>Delete</a>
 		</div>
 	</div>
 
@@ -195,13 +216,29 @@
 
 	} 
 	const icons = document.querySelectorAll('.icon');
-icons.forEach (icon => {  
-  icon.addEventListener('click', (event) => {
-    icon.classList.toggle("open");
-  });
-});
+	icons.forEach (icon => {  
+	icon.addEventListener('click', (event) => {
+		icon.classList.toggle("open");
+	});
+	});
+
+	const shareIt = async (title,text,url) => {
+		const shareData = {
+			title: title,
+			text: text,
+			url: url,
+		}
+
+		try {
+			await navigator.share(shareData)
+		} catch(err) {
+			console.log('Error sharing', err)
+			navigator.clipboard.writeText(url);
+			alert("Link copied to clipboard")
+		}
+	}
+
 
 </script>
-
 </body>
 </html>
