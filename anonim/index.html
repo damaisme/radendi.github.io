@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Yahaha</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="humberger.css"
+</head>
+<body class="bg">
+  
+	<!-- navbar -->
+	<nav id="navbar" class="fixed w-full top-1 left-0 z-20 ">
+		<div id="navheader" class="flex justify-between items-center px-5 py-3 text-white">
+			<p class="font-bold text-sm z-20">ANONIM</p>
+			<!-- <a class="block z-20" onclick="navToggle()" ><i class="fa fa-bars"></i></a> -->
+			<div class="block icon nav-icon-1 z-20" onclick="navToggle()">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div id="postheader" class="hidden flex justify-between items-center px-5 py-3 text-black">
+			<p class="font-bold text-sm">Postingan</p>
+		</div>
+		<div id="nav-menu" class="absolute w-9/12 min-h-screen top--1 right-0 bg-blue-700 z-10 px-8 pt-4">
+			<div class="rounded-lg bg-white w-full mt-16 px-4 py-2">
+				<p><i class="fa fa-info-circle"></i> Berada</p>
+			</div>
+			<div class="rounded-lg bg-white w-full mt-4 px-4 py-2">
+				<p><i class="fa fa-cog"></i> Pengaturan</p>
+			</div>
+			<div class="rounded-lg bg-white w-full mt-4 px-4 py-2">
+				<p><i class="fa fa-info-circle"></i> Berada</p>
+			</div>
+		</div> 
+	</nav>
+
+
+	<div id="profile" class="fixed z--1 top-0 h-48 w-full flex justify-center items-center flex-col text-white overflow-hidden">
+		<h1 class="text-3xl font-bold">HALLO ZACKY</h1>
+		<p class="text-sm">Kamu memiliki 0 Postingan</p>
+	</div>
+
+	<!-- Add button -->
+	<a onclick="toggle('create','fixed','hidden')" class="rounded-full h-16 w-16 fixed bg-green-500 bottom-5 right-5 z-10 flex items-center justify-center">
+		<i class="fa fa-plus text-white"></i>
+	</a>
+
+	<!-- popup create -->
+	<div id="create" class="hidden z-20 top-0 left-0 h-screen w-screen bg-popup flex justify-center items-center">
+		<div class="rounded-lg bg-purple-700 w-10/12 flex justify-center mb-20">
+			<!-- create from -->
+			<div class="w-full p-4">
+				<form action="">
+				<div class="flex justify-between items-center">
+					<h1 class="text-2xl font-bold text-white">Buat Postingan</h1>
+					<a onclick="toggle('create','fixed','hidden')" class="text-xl text-red-500"><i class="fa fa-times"></i></a>
+				</div>
+				<div class="flex justify-between items-center mt-4">
+					<textarea class="w-full h-48 rounded-lg p-2" placeholder="Tulis pertanyaan mu, dan biarkan mereka membalasnya dengan anonim!"></textarea>
+				</div>
+				<div class="flex justify-center items-center mt-4">
+					<button type="submit" name="submit" class="bg-green-500 rounded py-2 px-4 text-white">Posting</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="delete" class="hidden z-20 top-0 left-0 h-screen w-screen bg-popup flex justify-center items-center">
+		<div class="rounded-lg bg-purple-700 w-9/12 flex justify-center">
+			<div class="w-full p-4">
+				<h1 class="text-center text-xl text-white font-bold">Yakin mau dihapus?</h1>
+				<div class="flex justify-center items-center mt-2">
+					<button class="rounded-lg bg-red-500 text-white px-4 py-1 mx-3">Hapus</button>
+					<button onclick="toggle('delete','fixed','hidden')" class="rounded-lg bg-gray-600 text-white px-4 py-1 mx-3">Batal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="post" class="top-10 mt-48 h-90vh py-5 px-5 bg-white rounded-big">
+		<div class="flex justify-center">
+			<h2 class="text-center text-xl">Postingan</h2>
+			<!-- <a onclick=showAdd()><i class="fa fa-add"></i></a> -->
+		</div>
+
+		<div class="bg-purple-700 rounded-lg px-4 py-4 mt-3 text-white relative">
+			<a class="absolute right-4 top-0" onclick="actionToggle('post1')"><i class="fa fa-ellipsis-h"></i></a>
+			<a href="" class="hover:text-black block truncate text-clip w-5/6">Lorem ipsum dolor sit amet, consectetur.sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</a>
+		</div>
+
+		<div id="post1" class="action-menu bg-yellow-200 px-4 py-2 flex justify-between w-full relative bottom-1.5">
+			<a href=""><i class="fa fa-pen mr-2"></i>Edit</a>
+			<a href=""><i class="fa fa-share mr-2"></i>Share</a>
+			<a onclick="toggle('delete','fixed','hidden')"><i class="fa fa-trash mr-2"></i>Delete</a>
+		</div>
+
+		<div class="bg-purple-700 rounded-lg px-4 py-4 mt-3 text-white relative">
+			<a class="absolute right-4 top-0" onclick="actionToggle('post2')"><i class="fa fa-ellipsis-h"></i></a>
+			<a href="" class="hover:text-black block truncate text-clip w-5/6">Lorem ipsum dolor sit amet, consectetur.sdsdfsfsfsfsf</a>
+		</div>
+
+		<div id="post2" class="action-menu bg-yellow-200 px-4 py-2 flex justify-between w-full relative bottom-1.5">
+			<a href=""><i class="fa fa-pen mr-2"></i>Edit</a>
+			<a href=""><i class="fa fa-share mr-2"></i>Share</a>
+			<a href=""><i class="fa fa-trash mr-2"></i>Delete</a>
+		</div>
+	</div>
+
+
+	<!-- <div class="fixed inset-0 flex items-center justify-center">
+		<div class="fixed inset-0 bg-popup z-50 flex items-center justify-center">
+			<div class="w-10/12 bg-blue-500 rounded-lg shadow-lg overflow-y-auto">
+				<div class="flex justify-end pr-4 pt-2">
+					<button class="text-sm text-gray-500 hover:text-black" onclick="actionToggle('post2')">
+						<i class="fa fa-times"></i>
+					</button>
+				</div>
+				<div class="px-7 py-2">
+					<h2 class="text-white text-center">POSTING PERTANYAAN</h2>
+					<form action="/upload">
+						<textarea class="" name="pertanyaan" id="pertanyaan" cols="30"></textarea>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+<script>
+
+	function navToggle(){
+		var navMenu = document.getElementById('nav-menu')
+		navMenu.classList.toggle('active')
+	}
+
+	function actionToggle(id){
+		var muncul = document.getElementsByClassName("action-menu");
+		for (var i = 0; i < muncul.length; i++) {
+			if (muncul.item(i) != document.getElementById(id)) {
+				muncul.item(i).classList.remove('active')
+			}
+			
+		}
+		document.getElementById(id).classList.toggle('active')
+	}
+
+	function toggle(id,any,any2){
+		// var muncul = document.getElementsByClassName("action-menu");
+		// for (var i = 0; i < muncul.length; i++) {
+		// 	if (muncul.item(i) != document.getElementById(id)) {
+		// 		muncul.item(i).classList.remove('active')
+		// 	}
+			
+		// }
+		document.getElementById(id).classList.toggle(any2)
+		document.getElementById(id).classList.toggle(any)
+		console.log(id)
+		console.log(any)
+	}
+
+	// When the user scrolls the page, execute myFunction
+	window.onscroll = function() {myFunction()};
+	var navheader = document.getElementById("navheader")
+	var postheader = document.getElementById("postheader")
+	var navbar = document.getElementById("navbar")
+	var post = document.getElementById("post")
+
+
+	var navsticky = navbar.offsetTop;
+	var poststicky = post.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset >= navsticky) {
+	    navbar.classList.add("sticky-nav")
+	  } else {
+	    navbar.classList.remove("sticky-nav");
+	  }
+
+	  if (window.pageYOffset >= poststicky-50) {
+	    post.classList.remove("rounded-big")
+
+	  } else {
+	  	post.classList.add("rounded-big")
+	  }
+
+	} 
+	const icons = document.querySelectorAll('.icon');
+icons.forEach (icon => {  
+  icon.addEventListener('click', (event) => {
+    icon.classList.toggle("open");
+  });
+});
+
+</script>
+
+</body>
+</html>
