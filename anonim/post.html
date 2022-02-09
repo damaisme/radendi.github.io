@@ -40,9 +40,58 @@
 		</div> 
 	</nav>
 
-    <div id="pertanyaan" class="w-full mt-12 px-5 py-5 flex justify-center items-center flex-col">
-        <p>asfsf</p>
-        <h1>asfsdfsf</h1>
+    <div id="pertanyaan" class="w-full mt-12 px-5 py-5 ">
+        <p class="text-yellow-300 text-center">Pertanyaan dari Zacky</p>
+        <h1 class="text-xl font-bold text-white text-center">Apa yang kamu suka dariku?</h1>
+
+        <div class="flex justify-between items-center mt-4">
+            <textarea class="w-full h-44 rounded-lg p-2 block" placeholder="" resize="none"></textarea>
+        </div>
+        <div class="flex justify-center items-center mt-4">
+            <button type="submit" name="submit" class="bg-yellow-200 rounded py-1 px-4 text-purple-600">Kirim</button>
+        </div>
+    </div>
+
+    <div id="jawaban" class="top-10 h-90vh py-5 px-5 bg-white rounded-big">
+        <div class="bg-mint rounded-lg px-4 py-4 mt-3 text-white relative flex justify-between items-center">
+            <div>
+                <p class="text-xs font-bold text-yellow-300">From: Anonim</p>	
+                <p class="block w-5/6">Lorem ipsum dolor sit amet, consectetur. sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</p>
+            </div>
+            <a class="right-4 top-0" onclick="actionToggle('post1')"><i class="fa fa-ellipsis-h"></i></a>
+		</div>
+
+        <div id="post1" class="w-full action-menu bg-yellow-200 px-4 py-2 flex justify-between relative top-2">
+			<input class="w-10/12 py-1 px-2 rounded-lg mr-2" type="text" name="" id="" placeholder="tulis balasan disini">
+            <button type="submit">Kirim</button>
+		</div>
+
+        <div class="bg-mint w-5/6 rounded-lg px-4 py-4 mt-3 text-white relative ml-auto overflow-x-auto">
+            <p class="text-xs font-bold text-yellow-300">From: Anonim</p>	
+			<p class="block w-full">Lorem ipsum dolor sit amet, consectetur. sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</p>
+		</div>
+
+        <div class="bg-mint w-5/6 rounded-lg px-4 py-4 mt-3 text-white relative ml-auto overflow-x-auto">
+            <div>
+                <p class="text-xs font-bold text-yellow-300">From: Anonim</p>	
+                <p class="block w-5/6">Lorem ipsum dolor sit amet, consectetur. sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</p>
+            </div>
+			<p class="block w-full">Lorem ipsum dolor sit amet, consectetur. sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</p>
+		</div>
+
+
+        <div class="bg-mint rounded-lg px-4 py-4 mt-3 text-white relative flex justify-between items-center">			
+			<div>
+                <p class="text-xs font-bold text-yellow-300">From: Anonim</p>	
+                <p class="block w-5/6">Lorem ipsum dolor sit amet, consectetur. sdsdfsfsfsfsfasfsdsfsdfsdfdfsfsfsfsaf</p>
+            </div>
+            <a class="right-4 top-0" onclick="actionToggle('post2')"><i class="fa fa-ellipsis-h"></i></a>
+		</div>
+
+        <div id="post2" class="w-full action-menu bg-yellow-200 px-4 py-2 flex justify-between relative top-2">
+			<input class="w-10/12 py-1 px-2 rounded-lg mr-2" type="text" name="" id="" placeholder="tulis balasan disini">
+            <button type="submit">Kirim</button>
+		</div>
     </div>
 
 
