@@ -1,0 +1,40 @@
+.humberger{
+  background:;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.humberger span{
+  display: block;
+  width:20px;
+  height: 3px;
+  background: white;
+  margin: 2px 0;
+  transition: 0.3s;
+  transition-timing-function: linear;
+}
+
+.humberger.active{
+  display: relative;
+}
+
+.humberger.active span:nth-child(1){
+  position: absolute;
+  transform: rotate(45deg);
+  background: black;
+}
+
+.humberger.active span:nth-child(2){
+  position: relative;
+  transform: translateX(45px);
+  opacity: 0;
+  background: black;
+}
+
+.humberger.active span:nth-child(3){
+  position: absolute;
+  transform: rotate(-45deg);
+  background: black;
+}
