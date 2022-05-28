@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/tags/first/</loc>
+    <loc>/tags/first/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/categories/first/</loc>
+    <loc>/categories/first/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/post/first/</loc>
+    <loc>/post/first/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/tags/sec/</loc>
+    <loc>/tags/sec/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/categories/sec/</loc>
+    <loc>/categories/sec/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/post/sec/</loc>
+    <loc>/post/sec/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost:1313/search/</loc>
+    <loc>/search/</loc>
   </url>
 </urlset>
